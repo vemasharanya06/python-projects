@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Request</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Student Service Portal</h1>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/request">Submit Request</a>
+            <a href="/requests">View Requests</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="form-section">
+
+            <h2>Submit a Request</h2>
+
+            <form method="POST" action="/request">
+
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="roll">Roll Number</label>
+                <input type="text" id="roll" name="roll" required>
+
+                <label for="category">Request Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Examination">Examination</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Library">Library</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Request Description</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Service Portal | Student Project</p>
+    </footer>
+
+</body>
+
+</html>

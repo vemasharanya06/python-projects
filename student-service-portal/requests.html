@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Requests</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Student Service Portal</h1>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/request">Submit Request</a>
+            <a href="/requests">View Requests</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="requests-section">
+
+            <h2>Submitted Requests</h2>
+
+            {% if requests %}
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for item in requests %}
+
+                    <tr>
+                        <td>{{ item["id"] }}</td>
+                        <td>{{ item["name"] }}</td>
+                        <td>{{ item["roll"] }}</td>
+                        <td>{{ item["category"] }}</td>
+                        <td>{{ item["description"] }}</td>
+                        <td>{{ item["status"] }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+            {% else %}
+
+            <p class="no-requests">No requests submitted yet.</p>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Service Portal | Student Project</p>
+    </footer>
+
+</body>
+
+</html>
