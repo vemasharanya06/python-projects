@@ -1,0 +1,166 @@
+
+:root {
+    font-family: Arial, sans-serif;
+    color: #20243a;
+    background: #f4f6fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 48px 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #5b63d3;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 38px;
+}
+
+.subtitle {
+    color: #70758b;
+}
+
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.add-form input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #dfe3ef;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+.add-form button {
+    border: 0;
+    border-radius: 12px;
+    padding: 0 22px;
+    background: #5b63d3;
+    color: white;
+    font-weight: bold;
+}
+
+.task-panel {
+    background: white;
+    border: 1px solid #e8eaf2;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 12px 35px #242b5510;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.count {
+    color: #70758b;
+    background: #f1f2fb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eff0f6;
+}
+
+.task-item form {
+    margin: 0;
+}
+
+.check-button {
+    border: 1px solid #cdd1e5;
+    border-radius: 50%;
+    background: white;
+    color: #5b63d3;
+    width: 30px;
+    height: 30px;
+}
+
+.task-title {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+    color: #9297a8;
+}
+
+.delete-button {
+    border: 0;
+    background: transparent;
+    color: #c44e5c;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 10px;
+    color: #70758b;
+}
+
+.empty-icon {
+    font-size: 30px;
+    color: #5b63d3;
+}
+
+footer {
+    text-align: center;
+    color: #85899b;
+    font-size: 13px;
+    margin-top: 24px;
+}
+
+@media (max-width: 520px) {
+    .add-form {
+        flex-direction: column;
+    }
+
+    .add-form button {
+        padding: 14px;
+    }
+}
